@@ -97,7 +97,7 @@ def run_test():
     input_size = (112, 112)
 
     # Initialize ONNX Runtime session with GPU support
-    model = ort.InferenceSession("./checkpoints/mp_MFN_epoch15_acc0.5587.onnx", providers=['CUDAExecutionProvider', ])
+    model = ort.InferenceSession("./checkpoints/mp_MFN_epoch24.onnx", providers=['CUDAExecutionProvider', ])
 
     # Initialize MediaPipe face mesh detector
     face_mesh = mp.solutions.face_mesh.FaceMesh(max_num_faces=1, min_detection_confidence=0.8, min_tracking_confidence=0.5)
